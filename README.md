@@ -1,6 +1,6 @@
 # softUni
 
-All the exersizes from my education in SoftUni.bg 
+All the excersizes from my education in SoftUni.bg 
 https://softuni.bg/
 
 SoftUni is one of the largest and most respected educational institutions, providing training and career support in the fields of software engineering, digital marketing and design.
