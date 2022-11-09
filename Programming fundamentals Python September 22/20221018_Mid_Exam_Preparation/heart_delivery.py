@@ -34,18 +34,3 @@ if sum(neighborhood) == 0:
 else:
     count = [house for house in neighborhood if house != 0]
     print(f"Cupid has failed {len(count)} places.")
-
-# test inputs:
-
-# 10@10@10@2
-# Jump 1
-# Jump 2
-# Love
-
-# 2@4@2
-# Jump 2
-# Jump 2
-# Jump 8
-# Jump 3
-# Jump 1
-# Love!

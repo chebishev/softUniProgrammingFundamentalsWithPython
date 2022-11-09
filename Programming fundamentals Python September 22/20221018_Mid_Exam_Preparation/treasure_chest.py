@@ -1,36 +1,51 @@
-def main_func(data):
-    while True:
-        command = input()
-        new_list = []
+def loot_func(treasure_chest, current_command):
+    current_command.pop(0)
 
-        sum_items = 0
-        count = 0
-        if command == "Yohoho!":
-            break
-        current_command = command.split()
-        if current_command[0] == "Loot":
-            current_command.pop(0)
-            for char in current_command:
-                if char not in data:
-                    data.insert(0, char)
-        if current_command[0] == "Drop":
-            if 0 <= int(current_command[1]) < len(data):
-                removed = data.pop(int(current_command[1]))
-                data.append(removed)
+    for element in current_command:
+        if element not in treasure_chest:
+            treasure_chest.insert(0, element)
 
-        if current_command[0] == "Steal":
-            new_list = data[- int(current_command[1]):]
-            print(new_list)
-    avg = 0
-    for letter in data:
-        avg += len(letter)
-    avg /= len(data)
-    empty_chest = []
-    if new_list == empty_chest:
-        print("Failed treasure hunt.")
-    else:
-        print(f"Average treasure gain: {avg:.2f} pirate credits.")
+    return treasure_chest
 
 
-initial_treasure_chest = input().split("|")
-main_func(initial_treasure_chest)
+def drop_func(treasure_chest, index):
+    if 0 <= index < len(treasure_chest):
+        treasure_chest.append(treasure_chest.pop(index))
+
+    return treasure_chest
+
+
+def steal_func(treasure_chest, count):
+    stealed = []
+    for i in range(int(count)):
+        stealed.append(treasure_chest.pop())
+    stealed = stealed[::-1]
+    print(', '.join(stealed))
+
+    return treasure_chest
+
+
+initial_treasure_chest = input().split('|')
+
+while True:
+
+    command = input()
+    if command == 'Yohoho!':
+        break
+    current_command = command.split(' ')
+
+    if current_command[0] == 'Loot':
+        initial_treasure_chest = loot_func(initial_treasure_chest, current_command)
+    elif current_command[0] == 'Drop':
+        initial_treasure_chest = drop_func(initial_treasure_chest, int(current_command[1]))
+    elif current_command[0] == 'Steal':
+        initial_treasure_chest = steal_func(initial_treasure_chest, int(current_command[1]))
+
+if len(initial_treasure_chest) == 0:
+    print("Failed treasure hunt.")
+else:
+    total_gain = 0
+    for i in range(len(initial_treasure_chest)):
+        total_gain += len(initial_treasure_chest[i])
+    average_gain = total_gain / len(initial_treasure_chest)
+    print(f'Average treasure gain: {average_gain:.2f} pirate credits.')
