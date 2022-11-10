@@ -1,27 +1,25 @@
-list_numbers = input().split()
-string = input()
-list_string = []
-list_indexes = []
-index = 0
-message = ""
-for item in list_numbers:
-    for number in item:
-        current_number = int(number)
-        index += current_number
-    list_indexes.append(index)
-    index = 0
+coded_message = input().split()
+decoding_string = input()
 
-for character in string:
-    list_string.append(character)
+index_list = []
+for numbers in coded_message:
+    current_index = 0
+    for number in numbers:
+        current_index += int(number)
+    index_list.append(current_index)
 
-for indexes in list_indexes:
-    current_index = int(indexes)
-    while current_index > len(list_string):
-        current_index -= len(list_string)
-    message += list_string.pop(current_index)
-print(message)
-
-# 83/100
+final_string = ""
+for index in range(len(index_list)):
+    string_index = index_list[index]
+    valid_index = len(decoding_string)
+    while string_index >= valid_index:
+        string_index -= valid_index
+    if decoding_string[string_index].isdigit():
+        continue
+    else:
+        final_string += decoding_string[string_index]
+        decoding_string = decoding_string.replace(decoding_string[string_index], "", 1)
+print(final_string)
 
 # test inputs:
 
