@@ -3,7 +3,7 @@ words_list = input().split(", ")
 valid_symbol = False
 for username in words_list:
     if 3 <= len(username) <= 16:
-          for character in range(len(username)):
+        for character in range(len(username)):
             valid_symbol = False
             if username[character].isalnum() or \
                     username[character] == "-" or \
@@ -15,8 +15,8 @@ for username in words_list:
         if valid_symbol:
             if " " not in username:
                 print(username)
-    else:
-        continue
+        else:
+            continue
 
 # test inputs:
 
