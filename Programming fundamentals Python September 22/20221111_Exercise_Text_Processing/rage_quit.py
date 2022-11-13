@@ -7,7 +7,6 @@ def out_of_index(lst):
 rage_input = [char for char in input()]
 symbols = ""
 numbers = ""
-unique_symbols = ""
 rage_quit = ""
 while True:
     while not rage_input[0].isdigit():
@@ -21,9 +20,8 @@ while True:
     numbers = ""
     if out_of_index(rage_input):
         break
-for char in rage_quit:
-    if char not in unique_symbols:
-        unique_symbols += char
+
+unique_symbols = {char for char in rage_quit}
 print(f"Unique symbols used: {len(unique_symbols)}")
 print(rage_quit)
 
