@@ -9,9 +9,9 @@ for item in game_string:
     elif first_letter.lower():
         total_sum += number * (ord(first_letter) - 96)
     if last_letter.isupper():
-        total_sum += number - (ord(last_letter) - 64)
+        total_sum -= ord(last_letter) - 64
     elif last_letter.islower():
-        total_sum += number + (ord(last_letter) - 96)
+        total_sum += ord(last_letter) - 96
 
 print(f"{total_sum:.2f}")
 

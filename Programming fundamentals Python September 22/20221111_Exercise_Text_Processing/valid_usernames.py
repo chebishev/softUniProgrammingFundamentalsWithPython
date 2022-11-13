@@ -1,5 +1,4 @@
 words_list = input().split(", ")
-# consider strip() if judge is not merciful :)
 valid_symbol = False
 for username in words_list:
     if 3 <= len(username) <= 16:
