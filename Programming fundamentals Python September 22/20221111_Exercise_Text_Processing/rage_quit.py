@@ -1,3 +1,9 @@
+def out_of_index(lst):
+    if len(lst) == 0:
+        return True
+    return False
+
+
 rage_input = [char for char in input()]
 symbols = ""
 numbers = ""
@@ -6,16 +12,14 @@ rage_quit = ""
 while True:
     while not rage_input[0].isdigit():
         symbols += rage_input.pop(0).upper()
-        if len(rage_input) == 0:
-            break
     while rage_input[0].isdigit():
         numbers += rage_input.pop(0)
-        if len(rage_input) == 0:
+        if out_of_index(rage_input):
             break
     rage_quit += symbols * int(numbers)
     symbols = ""
     numbers = ""
-    if len(rage_input) == 0:
+    if out_of_index(rage_input):
         break
 for char in rage_quit:
     if char not in unique_symbols:
