@@ -14,8 +14,11 @@ for character in quit_string:
         if len(numbers) == 1 and len(symbols):
             numbers += character  # adding the second (i hope) digit to numbers
             quit_dict[symbols] = int(numbers)  # adding the current symbols and the number as key/value in the dict
-            numbers = ""  # resetting the variables
+
+            # resetting the variables
+            numbers = ""
             symbols = ""
+
         else:  # if no data in numbers: append the current digit
             numbers += character
 
@@ -39,10 +42,12 @@ final_string = ""
 
 # looping through the keys and multiplicate them with the int(values)
 for key in quit_dict.keys():
-    final_string += key * int(quit_dict[key])
-
+    if not quit_dict[key] == 0:
+        final_string += key * quit_dict[key]
+    else:
+        continue
     # looping through the characters of each key and add them as keys in the unique dictionary
-    for symbol in key:
+    for symbol in final_string:
         unique_symbols[symbol.upper()] = 0  # obviously with value 0
 
 print(f"Unique symbols used: {len(unique_symbols)}")  # counting the unique values
