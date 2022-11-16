@@ -33,43 +33,34 @@
 #     else:
 #         print(f'({floor(x4)}, {floor(y4)})({floor(x3)}, {floor(y3)})')
 
-
-from math import sqrt
 from math import floor
 
 
 def points_distance(lst):  # calculates the distance between the lines
     x1, y1, x2, y2 = lst
-    distance = sqrt((x2 - x1)**2 + (y2 - y1)**2)
-    return distance
+    return (x2 - x1)**2 + (y2 - y1)**2
 
 
 def closer_to_center(lst):  # checks which pair is closest to zero and returns it in right order
     x1, y1, x2, y2 = lst
-    distance_1 = sqrt(pow(x1, 2) + pow(y1, 2))
-    distance_2 = sqrt(pow(y2, 2) + pow(x2, 2))
+    distance_1 = pow(x1, 2) + pow(y1, 2)
+    distance_2 = pow(y2, 2) + pow(x2, 2)
     if distance_1 < distance_2:
-        return lst
+        return f"({floor(lst[0])}, {floor(lst[1])})({floor(lst[2])}, {floor(lst[3])})"
     lst = lst[2:] + lst[:2]
-    return lst
-
-
-def output(lst):   # formatting the output
-    lst = closer_to_center(lst)
     return f"({floor(lst[0])}, {floor(lst[1])})({floor(lst[2])}, {floor(lst[3])})"
 
 
 first_line = [float(input()) for x in range(4)]  # filling the first coordinates
 second_line = [float(input()) for y in range(4)]  # filling the second coordinates
-print(first_line)
 first_length = points_distance(first_line)
 second_length = points_distance(second_line)
 
 # when we have the longer line: make the output
 if first_length >= second_length:
-    print(output(first_line))
-else:
-    print(output(second_line))
+    print(closer_to_center(first_line))
+if second_length > first_length:
+    print(closer_to_center(second_line))
 
 # 60/100
 # test inputs:
