@@ -20,11 +20,17 @@ for index in range(len(numbers_list)):
 for index in range(len(take_list)):
     for taking in range(take_list[index]):
         taken_string += non_numbers_list.pop(0)
+        if len(non_numbers_list) == 0:
+            break
     for skipping in range(skip_list[index]):
+        if len(non_numbers_list) == 0:
+            break
         skipped_string += non_numbers_list.pop(0)
 print(taken_string)
 
 # test inputs:
+
+# skipTest_String044160
 
 # T2exs15ti23ng1_3cT1h3e0_Roppe
 
