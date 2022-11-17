@@ -22,15 +22,17 @@ while True:
     points = int(points)
     if contest in contest_dict.keys():
         if password in contest_dict[contest]:
-            ranking_dict[contest] = {}
-            if username not in ranking_dict[contest].keys():
-                ranking_dict[contest][username] = points
+            if username not in ranking_dict.keys():
+                ranking_dict[username] = {contest: points}
             else:
-                if points > ranking_dict[contest][username]:
-                    ranking_dict[contest][username] = points
+                if contest in ranking_dict[username].keys():
+                    if points > ranking_dict[username][contest]:
+                        ranking_dict[username][contest] = points
+                    else:
+                        command = input()
+                        continue
                 else:
-                    command = input()
-                    continue
+                    ranking_dict[username][contest] = points
         else:
             command = input()
             continue
@@ -38,23 +40,27 @@ while True:
         command = input()
         continue
     command = input()
-print(ranking_dict)
+
 best_user = ""
 total_points = 0
 users_total_points = {}
-for contest, username in ranking_dict.items():
-    for users, points in username.items():
-        if users not in users_total_points.keys():
-            users_total_points[users] = points
+for username, contest in ranking_dict.items():
+    for contests, points in contest.items():
+        if username not in users_total_points.keys():
+            users_total_points[username] = points
         else:
-            users_total_points[users] += points
+            users_total_points[username] += points
 for user, point in users_total_points.items():
     if point > total_points:
         best_user = user
         total_points = point
-print(users_total_points)
-
 print(f"Best candidate is {best_user} with total {total_points} points.")
+print("Ranking:")
+
+for key in sorted(ranking_dict.keys()):
+    print(key)
+    for contest, points in sorted(ranking_dict[key].items(), key=lambda x: x[1], reverse=True):
+        print(f"#  {contest} -> {points}")
 
 # test inputs:
 
