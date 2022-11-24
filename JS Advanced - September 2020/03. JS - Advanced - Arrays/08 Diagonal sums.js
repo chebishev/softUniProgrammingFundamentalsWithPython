@@ -1,5 +1,0 @@
-function diagonalSums(matrix){
-
-
-}
-diagonalSums([ ]);
