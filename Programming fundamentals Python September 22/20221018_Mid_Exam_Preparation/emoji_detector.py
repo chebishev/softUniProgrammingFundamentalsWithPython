@@ -6,27 +6,29 @@ for digit in initial_text:
     if digit.isdigit():
         cool_threshold *= int(digit)
 print(f"Cool threshold: {cool_threshold}")
-initial_list = initial_text.split()
 
 valid_emoji_list = []
-pattern = r" "
-match_result = re.findall(pattern, initial_text)
-print(match_result)
-for match in match_result:
-    if match[0] == "**" or match[0] == "::":
-        valid_emoji_list.append(''.join(match))
-
 cool_emoji_list = []
+pattern = r"\s(:{2}|\*{2})([A-Z][a-z]{2,})(\1)"
+match_result = re.findall(pattern, initial_text)
+for match in match_result:
+    valid_emoji_list.append(''.join(match))
+
 sum_ascii = 0
 for emoji in valid_emoji_list:
     for character in emoji:
         if character == "*" or character == ":":
             continue
-        sum_ascii += ord(character)
+        else:
+            sum_ascii += ord(character)
     if sum_ascii > cool_threshold:
         cool_emoji_list.append(emoji)
         sum_ascii = 0
-print(f"{len(valid_emoji_list)} emojis found in the text. The cool ones are: ", *cool_emoji_list, sep="\n")
+
+if cool_emoji_list:
+    print(f"{len(valid_emoji_list)} emojis found in the text. The cool ones are: ", *cool_emoji_list, sep="\n")
+else:
+    print(f"{len(valid_emoji_list)} emojis found in the text. The cool ones are: ")
 
 # 20/100
 
