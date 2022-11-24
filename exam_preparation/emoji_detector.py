@@ -1,31 +1,35 @@
 import re
 
-initial_text = input()
+text = input()
+
+emoji_pattern = r"(\*{2}|[:]{2})([A-Z][a-z]{2,})\1"
+emojis = re.findall(emoji_pattern, text)
+valid_emojis = []
+counter = 0
+
+digits_pattern = r"\d"
+all_digits = re.findall(digits_pattern, text)
 cool_threshold = 1
-for digit in initial_text:
-    if digit.isdigit():
-        cool_threshold *= int(digit)
+
+for digit in all_digits:
+    cool_threshold *= int(digit)
+
 print(f"Cool threshold: {cool_threshold}")
 
-valid_emoji_list = []
-cool_emoji_list = []
-pattern = r"(:{2}|\*{2})([A-Z][a-z]{2,})(\1)"
-match_result = re.findall(pattern, initial_text)
-for match in match_result:
-    valid_emoji_list.append(match[1])
-
-
-for emoji in match_result:
-    sum_ascii = 0
+for emoji in emojis:
+    current_coolness = 0
     for character in emoji[1]:
         if character == "*" or character == ":":
             continue
         else:
-            sum_ascii += ord(character)
-    if sum_ascii >= cool_threshold:
-        cool_emoji_list.append(emoji[0] + emoji[1] + emoji[0])
+            current_coolness += ord(character)
 
-print(f"{len(valid_emoji_list)} emojis found in the text. The cool ones are: ", *cool_emoji_list, sep="\n")
+    if current_coolness >= cool_threshold:
+        valid_emojis.append(emoji[0]+emoji[1]+emoji[0])
+    counter += 1
+
+print(f"{counter} emojis found in the text. The cool ones are:")
+print('\n'.join(valid_emojis))
 
 # test inputs:
 
