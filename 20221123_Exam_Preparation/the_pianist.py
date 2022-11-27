@@ -3,10 +3,8 @@ pianist_dictionary = {}
 
 for index in range(number_of_initial_pieces):
     piece, composer, key = input().split("|")
-    if piece not in pianist_dictionary.keys():
-        pianist_dictionary[piece] = {}
+    pianist_dictionary[piece] = {}
     pianist_dictionary[piece][composer] = key
-
 while True:
 
     command = input()
