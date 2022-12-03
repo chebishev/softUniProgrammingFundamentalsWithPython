@@ -7,7 +7,6 @@
 # decrypting the message, you will get a type of treasure and its coordinates. The type will be between the symbol
 # "&", and the coordinates - between the symbols "<' and '>'. For each line print the type and the coordinates in the
 # format "Found {type} at {coordinates}".
-import re
 
 key = list(map(int, input().split()))
 while True:
@@ -26,11 +25,30 @@ while True:
         new_ord_value = ord(current_char) - key[index]
         current_key += chr(new_ord_value)
         index += 1
-    pattern = r"&([A-Za-z]+)&\w+<([A-Z\d]+)>"
-    result = re.split(pattern, current_key)
-    treasure_type = result[1]
-    coordinates = result[2]
-    print(f"Found {treasure_type} at {coordinates}")
+
+    resource_type = ""
+    coordinates = ""
+    resource_found = False
+    coordinates_found = False
+    for index in range(len(current_key)):
+        if current_key[index] == "&":
+            if resource_found:
+                resource_found = False
+                continue
+            resource_found = True
+            continue
+        if current_key[index] == "<":
+            coordinates_found = True
+            continue
+        elif current_key[index] == ">":
+            break
+        if resource_found:
+            resource_type += current_key[index]
+        if coordinates_found:
+            coordinates += current_key[index]
+
+    print(f"Found {resource_type} at {coordinates}")
+
 
 
 # test inputs:
