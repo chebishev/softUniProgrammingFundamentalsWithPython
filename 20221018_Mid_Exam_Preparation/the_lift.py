@@ -1,35 +1,31 @@
-def all_wagons_full(lst):
-    if sum(lst) == 4 * len(lst):
+def lift_is_full(wagons_list):
+    if len(wagons_list) * 4 < sum(wagons_list):
+        return False
+    elif len(wagons_list) * 4 == sum(wagons_list):
         return True
 
 
 people_waiting = int(input())
-current_state = list(map(int, input().split()))
-has_empty_slots = False
-while True:
-    if people_waiting <= 0 and sum(current_state) < 4 * len(current_state):
-        has_empty_slots = True
-        break
-    elif people_waiting <= 0:
-        break
-    for wagon in range(len(current_state)):
-        free_space = 4 - current_state[wagon]
-        if people_waiting < free_space:
-            current_state[wagon] += people_waiting
-            people_waiting = 0
-        else:
-            current_state[wagon] += free_space
-            people_waiting -= free_space
-        if people_waiting <= 0 and sum(current_state) < 4 * len(current_state):
-            has_empty_slots = True
+lift_initial_state = list(map(int, input().split()))
+
+for index in range(len(lift_initial_state)):
+    while people_waiting and lift_initial_state[index] < 4:
+        lift_initial_state[index] += 1
+        people_waiting -= 1
+        if not people_waiting and not lift_is_full(lift_initial_state):
+            print(f"The lift has empty spots!\n", *lift_initial_state, end=" ")
             break
-        elif all_wagons_full(current_state):
+        elif people_waiting and lift_is_full(lift_initial_state):
+            print(f"There isn't enough space! {people_waiting} people in a queue!\n", *lift_initial_state, end=" ")
             break
-        if people_waiting <= 0:
+        elif not people_waiting and lift_is_full(lift_initial_state):
+            print(*lift_initial_state, end=" ")
             break
-    if all_wagons_full(current_state):
-        break
-if has_empty_slots:
-    print(f"The lift has empty spots!\n", *current_state, sep=" ")
-else:
-    print(f"There isn't enough space! {people_waiting} people in a queue!\n", *current_state, sep=" ")
+
+# test inputs:
+
+# 15
+# 0 0 0 0
+
+# 20
+# 0 2 0
