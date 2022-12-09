@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="mid_exam_retake">
-      <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/paintings_numbers.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="lists basics more exercises">
+      <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/spring_vacation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670567527293</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="lists basics more exercises">
+      <created>1670576320793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670576320793</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -212,7 +219,8 @@
     <MESSAGE value="exam + dict more" />
     <MESSAGE value="mid_exam_preparation" />
     <MESSAGE value="mid_exam_retake" />
-    <option name="LAST_COMMIT_MESSAGE" value="mid_exam_retake" />
+    <MESSAGE value="lists basics more exercises" />
+    <option name="LAST_COMMIT_MESSAGE" value="lists basics more exercises" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -221,11 +229,6 @@
           <url>file://$PROJECT_DIR$/20221204_Final_Exam/followers.py</url>
           <line>12</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/20221208_Mid_Exam_Retake/google_searches.py</url>
-          <line>4</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/20221208_Mid_Exam_Retake/books_world.py</url>
