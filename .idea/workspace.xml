@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="exam + dict more">
-      <change afterPath="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/memory_game.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="mid_exam_preparation">
       <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/books_world.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/google_searches.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/spice_shelf.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/spice_shelf_func_85.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/the_lift.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/the_lift.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,14 +192,22 @@
       <option name="project" value="LOCAL" />
       <updated>1670421369549</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mid_exam_preparation">
+      <created>1670500173406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670500173406</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final_exam 300/300" />
     <MESSAGE value="..." />
     <MESSAGE value="exam + dict more" />
-    <option name="LAST_COMMIT_MESSAGE" value="exam + dict more" />
+    <MESSAGE value="mid_exam_preparation" />
+    <option name="LAST_COMMIT_MESSAGE" value="mid_exam_preparation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
