@@ -1,5 +1,6 @@
 targets = [int(x) for x in input().split()]
 counter = 0
+
 while True:
 
     command = input()
