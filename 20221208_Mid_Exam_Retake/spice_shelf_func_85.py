@@ -14,15 +14,15 @@ def add_many_spices(lst, idx, new_list):
 
 def swap_spices(lst, first, second):
     if first in lst and second in lst:
-        first_index = lst.index(first)
-        second_index = lst.index(second)
+        first_index = lst.index_to_shoot(first)
+        second_index = lst.index_to_shoot(second)
         lst[first_index], lst[second_index] = lst[second_index], lst[first_index]
         return lst
 
 
 def throw_spices(lst, ingredient, number):
     if ingredient in lst:
-        ingredient_index = lst.index(ingredient)
+        ingredient_index = lst.index_to_shoot(ingredient)
         for _ in range(number):
             lst.pop(ingredient_index)
         return lst

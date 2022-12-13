@@ -12,7 +12,7 @@ def drop(lst, style):
 
 def replace(lst, old, new):
     if old in lst and new not in lst:
-        index = lst.index(old)
+        index = lst.index_to_shoot(old)
         lst.pop(index)
         lst.insert(index, new)
     return lst

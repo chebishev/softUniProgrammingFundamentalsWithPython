@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="Final exam two more solutions">
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/bakery_shop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/email_validator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/employees.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="Final exam retake">
+      <change afterPath="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/shoot_for_the_win_two.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/books_world.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/books_world.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/spice_shelf_func_85.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221208_Mid_Exam_Retake/spice_shelf_func_85.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221212_Final_Exam_Retake/employees.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/employees.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.employees">
+  <component name="RunManager" selected="Python.shoot_for_the_win_two">
     <configuration name="bakery_shop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,27 +57,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221212_Final_Exam_Retake/bakery_shop.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="boss_rush" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="softUni" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221204_Final_Exam" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221204_Final_Exam/boss_rush.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,13 +128,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="shoot_for_the_win_two" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="softUni" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/shoot_for_the_win_two.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.shoot_for_the_win_two" />
         <item itemvalue="Python.employees" />
         <item itemvalue="Python.bakery_shop" />
         <item itemvalue="Python.email_validator (1)" />
         <item itemvalue="Python.email_validator" />
-        <item itemvalue="Python.boss_rush" />
       </list>
     </recent_temporary>
   </component>
@@ -188,13 +189,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670773727964</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final exam retake">
+      <created>1670875186622</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670875186622</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final_exam 300/300" />
     <MESSAGE value="..." />
     <MESSAGE value="Final exam two more solutions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final exam two more solutions" />
+    <MESSAGE value="Final exam retake" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final exam retake" />
   </component>
 </project>

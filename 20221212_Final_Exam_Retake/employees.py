@@ -1,7 +1,8 @@
 import re
 
 number_of_inputs = int(input())
-pattern = r'([A-Z][a-z]{2,}\s[A-Z][a-z]{2,})[#]+(([A-Za-z]+)([&]{1}([A-z]+))?([&]{1}([A-z]+))?)[\d]{2}(([A-Za-z0-9]+)\s(Ltd\.|JSC))'
+pattern = r'([A-Z][a-z]{2,}\s[A-Z][a-z]{2,})[#]+(([A-Za-z]+)([&]{1}([A-z]+))?([&]{1}([A-z]+))?)[\d]{2}(([' \
+          r'A-Za-z0-9]+)\s(Ltd\.|JSC))'
 for index in range(number_of_inputs):
     current_employee = input()
     result = re.split(pattern, current_employee)
@@ -12,6 +13,8 @@ for index in range(number_of_inputs):
             job_position = job_position.replace("&", " ")
         company_name = result[8]
         print(f"{employee_name} is {job_position} at {company_name}")
+
+# 57/100
 
 # test inputs:
 
