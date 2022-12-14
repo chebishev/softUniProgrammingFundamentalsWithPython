@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="Final exam two more solutions">
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/bakery_shop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/email_validator.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/20221212_Final_Exam_Retake/employees.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="mid exam preparation 3 3/3">
+      <change afterPath="$PROJECT_DIR$/20221104_Excersise_Dictionaries/dragon_army.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221104_Excersise_Dictionaries/snow_white.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221104_Excersise_Dictionaries/snow_white.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +31,9 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IPDBjtaWSmAbi8WtUkz8A5Saq9" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,8 +44,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.employees">
-    <configuration name="bakery_shop" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.dragon_army">
+    <configuration name="counter_strike" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -51,11 +53,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221212_Final_Exam_Retake" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221212_Final_Exam_Retake/bakery_shop.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/counter_strike.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,7 +66,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="boss_rush" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="dragon_army" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,11 +74,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221204_Final_Exam" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221104_Excersise_Dictionaries" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221204_Final_Exam/boss_rush.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221104_Excersise_Dictionaries/dragon_army.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,7 +87,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="email_validator (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="moving_target" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -93,11 +95,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221212_Final_Exam_Retake" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221212_Final_Exam_Retake/email_validator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221018_Mid_Exam_Preparation/moving_target.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,7 +108,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="email_validator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="paintings_numbers" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,11 +116,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221212_Final_Exam_Retake" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221208_Mid_Exam_Retake" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\suffe\PycharmProjects\softUniProgrammingFundamentalsWithPython\20221212_Final_Exam_Retake\email_validator.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221208_Mid_Exam_Retake/paintings_numbers.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -127,7 +129,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="employees" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="snow_white" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="softUni" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -135,11 +137,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221212_Final_Exam_Retake" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/20221104_Excersise_Dictionaries" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221212_Final_Exam_Retake/employees.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/20221104_Excersise_Dictionaries/snow_white.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.employees" />
-        <item itemvalue="Python.bakery_shop" />
-        <item itemvalue="Python.email_validator (1)" />
-        <item itemvalue="Python.email_validator" />
-        <item itemvalue="Python.boss_rush" />
+        <item itemvalue="Python.dragon_army" />
+        <item itemvalue="Python.snow_white" />
+        <item itemvalue="Python.moving_target" />
+        <item itemvalue="Python.counter_strike" />
+        <item itemvalue="Python.paintings_numbers" />
       </list>
     </recent_temporary>
   </component>
@@ -181,20 +183,96 @@
       <option name="project" value="LOCAL" />
       <updated>1670167942795</updated>
     </task>
-    <task id="LOCAL-00003" summary="Final exam two more solutions">
-      <created>1670773727964</created>
+    <task id="LOCAL-00003" summary="exam + dict more">
+      <created>1670421369549</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1670773727964</updated>
+      <updated>1670421369549</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="mid_exam_preparation">
+      <created>1670500173406</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670500173406</updated>
+    </task>
+    <task id="LOCAL-00005" summary="mid_exam_retake">
+      <created>1670567527293</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670567527293</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lists basics more exercises">
+      <created>1670576320793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1670576320793</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mid exam retake">
+      <created>1670583268958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670583268958</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mid exam preparation 3 3/3">
+      <created>1670935876058</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1670935876058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="final_exam 300/300" />
     <MESSAGE value="..." />
-    <MESSAGE value="Final exam two more solutions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Final exam two more solutions" />
+    <MESSAGE value="exam + dict more" />
+    <MESSAGE value="mid_exam_preparation" />
+    <MESSAGE value="mid_exam_retake" />
+    <MESSAGE value="lists basics more exercises" />
+    <MESSAGE value="mid exam retake" />
+    <MESSAGE value="mid exam preparation 3 3/3" />
+    <option name="LAST_COMMIT_MESSAGE" value="mid exam preparation 3 3/3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221204_Final_Exam/followers.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221208_Mid_Exam_Retake/books_world.py</url>
+          <line>28</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221208_Mid_Exam_Retake/spice_shelf_func_85.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221208_Mid_Exam_Retake/paintings_numbers.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221018_Mid_Exam_Preparation/counter_strike.py</url>
+          <line>3</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="dragons_count" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
