@@ -1,44 +1,31 @@
 import re
 
-messages = int(input())
-pattern = r"[star]"
-attacked_planets = []
-destroyed_planets = []
-
-for message in range(messages):
-    current_message = input()   # taking current input
-    search_match = re.findall(pattern,current_message, re.IGNORECASE)  # matching all star ocurrences(case insensitive)
-    star_list = []   # empty list for easier counting of the letters
-    for character in search_match:
-        star_list.append(character)   # append every starSTAR character
-    decryption_key = len(star_list)   # this value will be subtracted from the ASCII of every character in the message
-    new_message = ""    # decrypted message
-    for character in current_message:
-        new_message += chr(ord(character) - decryption_key)   # actual decrypting
-
-    new_pattern = r"([^@\-!:>].*)?@([A-Za-z]+)([^@\-!:>].*)?:([\d]+)(.*[^@\-!:>])?!([A|D])!([^@\-!:>].*)?->([\d]+)([^@\-!:>].*)?"
-    search_matches = re.split(new_pattern, new_message)
-    if len(search_matches) < 10:
-        continue
-    else:
-        planet = search_matches[2]
-        population = int(search_matches[4])
-        attack_type = search_matches[6]
-        soldier_count = search_matches[8]
-    if planet and population and attack_type and soldier_count:
+number_of_messages = int(input())
+key_pattern = r"[STARstar]"
+star_enigma_dict = {"Attacked planets:": [], "Destroyed planets:": []}
+for message in range(number_of_messages):
+    current_message = input()
+    key_search = re.findall(key_pattern, current_message)
+    key = len(key_search)
+    secret_message = ""
+    for char in range(len(current_message)):
+        secret_message += chr(ord(current_message[char]) - key)
+    planet_pattern = r"([^@\-:>!])*(@([A-Za-z]+))([^@\-:>!])*(:([\d]+))([^@\-:>!])*(!([A|D])!)([^@\-:>!])*(->([\d]+))"
+    planet_search = re.findall(planet_pattern, secret_message)
+    if planet_search:
+        planet = planet_search[0][2]
+        population = int(planet_search[0][5])
+        attack_type = planet_search[0][8]
+        soldier_count = int(planet_search[0][11])
         if attack_type == "A":
-            attacked_planets.append(planet)
-        else:
-            destroyed_planets.append(planet)
-    else:
-        continue
-print(f"Attacked planets: {len(attacked_planets)}")
-for planet in sorted(attacked_planets):
-    print(f"-> {planet}")
-print(f"Destroyed planets: {len(destroyed_planets)}")
-for planet in sorted(destroyed_planets):
-    print(f"-> {planet}")
+            star_enigma_dict["Attacked planets:"].append(planet)
+        elif attack_type == "D":
+            star_enigma_dict["Destroyed planets:"].append(planet)
 
+for key in sorted(star_enigma_dict.keys()):
+    print(f"{key} {len(star_enigma_dict[key])}")
+    for planet in sorted(star_enigma_dict[key]):
+        print(f"-> {planet}")
 
 # test inputs:
 
