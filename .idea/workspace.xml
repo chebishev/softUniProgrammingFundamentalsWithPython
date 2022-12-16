@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="text processing more exercises - Completed!">
-      <change afterPath="$PROJECT_DIR$/20221118_Exercise_Regular_Expressions/html_parser.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="regex more exercises completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/20221118_Exercise_Regular_Expressions/star_enigma.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221118_Exercise_Regular_Expressions/star_enigma.py" afterDir="false" />
     </list>
@@ -246,7 +245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671017235681</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="regex more exercises completed">
+      <created>1671182972358</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1671182972358</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -261,7 +267,8 @@
     <MESSAGE value="dictionaries more exercises 4/5" />
     <MESSAGE value="all exams completed" />
     <MESSAGE value="text processing more exercises - Completed!" />
-    <option name="LAST_COMMIT_MESSAGE" value="text processing more exercises - Completed!" />
+    <MESSAGE value="regex more exercises completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="regex more exercises completed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

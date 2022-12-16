@@ -12,7 +12,7 @@ for message in range(number_of_messages):
         secret_message += chr(ord(current_message[char]) - key)
     planet_pattern = r"([^@\-:>!])*(@([A-Za-z]+))([^@\-:>!])*(:([\d]+))([^@\-:>!])*(!([A|D])!)([^@\-:>!])*(->([\d]+))"
     planet_search = re.findall(planet_pattern, secret_message)
-    if planet_search:
+    if planet_search:    # planet name on index 2, population - index 5, status at index 8 and soldiers at index 11
         planet = planet_search[0][2]
         population = int(planet_search[0][5])
         attack_type = planet_search[0][8]
