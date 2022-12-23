@@ -27,3 +27,27 @@ for row in range(len(dots_list)):
         else:
             dot_found = False
             continue
+print("\n".join(dots_list))
+
+# test inputs:
+
+# 5
+# . . - - -
+# . . - - -
+# - - - - -
+# - - - . .
+# - - - . .
+
+# 6
+# . . - . - .
+# - . . . . .
+# - . - - - -
+# - . . - - -
+# - . . . . -
+# - - - . . -
+
+# 4
+# - . - . . –
+# . - . . - .
+# . - - - - -
+# - - - . - -

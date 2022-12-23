@@ -9,7 +9,8 @@ for row in range(rows):
 targets_list = input().split()
 for square in targets_list:
     current_square = square.split("-")
-    row, col = int(current_square[0]), int(current_square[1])
+    row = int(current_square[0])
+    col = int(current_square[1])
     if battle_ships_list[row][col] > 0:
         battle_ships_list[row][col] -= 1
         if battle_ships_list[row][col] == 0:
