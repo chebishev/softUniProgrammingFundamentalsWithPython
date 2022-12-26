@@ -1,15 +1,15 @@
-def valid_position(matrix, row, col):
-    if 0 <= row < len(maze) and 0 <= col < len(maze[row]):
+def valid_position(direction):
+    if direction in maze:
         return True
     return False
 
-def not_wall(maze, row, col):
-    if maze[row][cow] == " ":
+def not_wall(direction):
+    if direction == " ":
         return True
     return False
 
-def exit():
-    if maze[row] == 0 or maze[row] == len(maze) - 1 and col == 0 or col == len(maze[row]) -1:
+def exit(matrix, row, col):
+    if matrix[row] == 0 or matrix[row] == len(matrix) - 1 and col == 0 or col == len(matrix[row]) -1:
         return True
     return False
 
@@ -25,7 +25,9 @@ start_row = 0
 start_index = 0
 initial_index = 0
 initial_row = 0
-is_found = False
+path_counter = 0
+k_is_found = False
+exit_found = False
 for index in range(len(maze)):
     if is_found:
         break
@@ -37,11 +39,15 @@ for index in range(len(maze)):
                 start_index = row.index(position)
                 initial_row = index
                 start_row = index
-                is_found = True
+                k_is_found = True
                 break
 
 while True:
-    if valid_position(maze, initial_row, initial_index -1) \
+    left = maze[initial_row][initial_index - 1]
+    right = maze[initial_row][initial_index + 1]
+    up = maze[initial_row - 1][initial_index]
+    down = maze[initial_row + 1][initial_index]
+    if valid_position(left) \
         and not_wall(maze, initial_row, initial_index - 1):
         maze[initial_row][initial_index - 1] = "k"
         initial_index -= 1
@@ -54,7 +60,14 @@ while True:
         initial_row = initial_row + 1
     else:
         break
+    if exit(maze, initial_row, initial_index):
+            exit_found = True
+            break
 
+if exit_found:
+    print()
+else:
+    print("Kate cannot get out")
 # test inputs:
 
 # 4
