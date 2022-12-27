@@ -1,17 +1,23 @@
-def valid_position(direction):
-    if direction in maze:
+def valid_position(matrix, row, col):
+    if 0 <= row < len(matrix) and 0 <= col < len(matrix[row]):
         return True
     return False
+
 
 def not_wall(direction):
     if direction == " ":
         return True
     return False
 
+
 def exit(matrix, row, col):
-    if matrix[row] == 0 or matrix[row] == len(matrix) - 1 and col == 0 or col == len(matrix[row]) -1:
+    if row == 0 and 0 <= col < len(matrix[row]) \
+            or row == len(matrix) - 1 and 0 <= col < len(matrix[row]) \
+            or col == 0 and 0 <= row < len(matrix[row][col]) \
+            or col == len(matrix[row]) - 1 and 0 <= row < len(matrix[row][col]):
         return True
     return False
+
 
 maze_rows = int(input())
 #   # - wall
@@ -29,7 +35,7 @@ path_counter = 0
 k_is_found = False
 exit_found = False
 for index in range(len(maze)):
-    if is_found:
+    if k_is_found:
         break
     row = maze[index]
     if "k" in row:
@@ -43,29 +49,56 @@ for index in range(len(maze)):
                 break
 
 while True:
-    left = maze[initial_row][initial_index - 1]
-    right = maze[initial_row][initial_index + 1]
-    up = maze[initial_row - 1][initial_index]
-    down = maze[initial_row + 1][initial_index]
-    if valid_position(left) \
-        and not_wall(maze, initial_row, initial_index - 1):
-        maze[initial_row][initial_index - 1] = "k"
-        initial_index -= 1
-        
-    elif valid_position(maze, initial_row, initial_index + 1):
-        initial_index = initial_index + 1
-    elif valid_position(maze, initial_row-1, initial_index):
-        initial_row = initial_row - 1
-    elif valid_position(maze, initial_row + 1, initial_index):
-        initial_row = initial_row + 1
-    else:
+    wall_counter = 0
+    if valid_position(maze, initial_row, initial_index - 1):
+        left = maze[initial_row][initial_index - 1]
+        if not_wall(left):
+            if exit(maze, initial_row, initial_index - 1):
+                exit_found = True
+                break
+            else:
+                maze[initial_row][initial_index - 1] = "k"
+                initial_index -= 1
+        else:
+            wall_counter += 1
+    if valid_position(maze, initial_row, initial_index + 1):
+        right = maze[initial_row][initial_index + 1]
+        if not_wall(right):
+            if exit(maze, initial_row, initial_index + 1):
+                exit_found = True
+                break
+            else:
+                maze[initial_row][initial_index + 1] = "k"
+                initial_index += 1
+        else:
+            wall_counter += 1
+    if valid_position(maze, initial_row - 1, initial_index):
+        up = maze[initial_row - 1][initial_index]
+        if not_wall(up):
+            if exit(maze, initial_row - 1, initial_index):
+                exit_found = True
+                break
+            else:
+                maze[initial_row - 1][initial_index] = "k"
+                initial_row = initial_row - 1
+        else:
+            wall_counter += 1
+    if valid_position(maze, initial_row + 1, initial_index):
+        down = maze[initial_row + 1][initial_index]
+        if not_wall(down):
+            if exit(maze, initial_row + 1, initial_index):
+                exit_found = True
+                break
+            else:
+                maze[initial_row + 1][initial_index] = "k"
+                initial_row = initial_row + 1
+        else:
+            wall_counter += 1
+    if wall_counter == 4:
         break
-    if exit(maze, initial_row, initial_index):
-            exit_found = True
-            break
 
 if exit_found:
-    print()
+    print("Yes")
 else:
     print("Kate cannot get out")
 # test inputs:

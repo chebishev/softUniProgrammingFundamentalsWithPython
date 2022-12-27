@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="final exam retake">
-      <change afterPath="$PROJECT_DIR$/20221014_Excersize_Lists_Advanced/kates_way_out.py" afterDir="false" />
+    <list default="true" id="8a32fb04-47f2-46e7-900e-9b41a2060736" name="Changes" comment="lists advanced ME, problem 3 started">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/20221014_Excersize_Lists_Advanced/kates_way_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/20221014_Excersize_Lists_Advanced/kates_way_out.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671397274107</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="lists advanced ME, problem 3 started">
+      <created>1671806961418</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671806961418</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +248,18 @@
     <MESSAGE value="Final exam two more solutions" />
     <MESSAGE value="dictionaries more exercises problem 3 10/100" />
     <MESSAGE value="final exam retake" />
-    <option name="LAST_COMMIT_MESSAGE" value="final exam retake" />
+    <MESSAGE value="lists advanced ME, problem 3 started" />
+    <option name="LAST_COMMIT_MESSAGE" value="lists advanced ME, problem 3 started" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/20221014_Excersize_Lists_Advanced/kates_way_out.py</url>
+          <line>50</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
