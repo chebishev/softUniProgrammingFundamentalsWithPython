@@ -21,3 +21,11 @@ if lift_full and people_wait:
 elif not people_wait and not lift_full:
     print("The lift has empty spots!")
 print(*lift_initial_state, end=" ")
+
+# test inputs:
+
+# 15
+# 0 0 0 0
+
+# 20
+# 0 2 0
