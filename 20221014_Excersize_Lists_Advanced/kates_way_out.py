@@ -21,29 +21,22 @@ def exit(matrix, row, col):
 
 maze_rows = int(input())  # integer that gives us the number of the rows. We will use it as a range in the for loop
 maze = []  # empty list, which will take all the rows with the given data from the following for loop
-for row in range(maze_rows):
-    current_row = [x for x in input()]  # converting the row data from string to list of elements
-    maze.append(current_row)  # adding the current row to the list
 start_row = 0  # this will keep the start position of Kate as a Row number
 start_index = 0  # this will keep the start position of Kate as a Column number
 y = 0  # current row
 x = 0  # current column
-k_is_found = False  # this flag will be used to stop the for loop after "k" is found
-exit_found = False  # with this we will break the while loop if the first exit is found
-for index in range(len(maze)):  # finding "k"
-    if k_is_found:
-        break
-    row = maze[index]
-    if "k" in row:
-        for position in row:
-            if position == "k":
-                y = row.index(position)  # assigning the current column position of Kate
-                start_index = row.index(position)  # assigning the start column position of Kate
-                x = index  # assigning the current row position of Kate
-                start_row = index  # assigning the start row position of Kate
-                k_is_found = True
-                break
+for row in range(maze_rows):
+    current_row = [x for x in input()]  # converting the row data from string to list of elements
+    maze.append(current_row)  # adding the current row to the list
 
+    if "k" in current_row:
+        start_row = row
+        x = row
+        k_index = maze[row].index("k")
+        start_index = k_index
+        y = k_index
+
+exit_found = False  # with this we will break the while loop if the first exit is found
 path_list = [(start_row, start_index)]  # we are using it as a counter (by length) at the final
 while True:
 
