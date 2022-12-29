@@ -23,8 +23,8 @@ maze_rows = int(input())  # integer that gives us the number of the rows. We wil
 maze = []  # empty list, which will take all the rows with the given data from the following for loop
 start_row = 0  # this will keep the start position of Kate as a Row number
 start_index = 0  # this will keep the start position of Kate as a Column number
-y = 0  # current row
-x = 0  # current column
+y = 0  # current row - it will be used as shorter direction (left/right) when kate is moving
+x = 0  # current column - - it will be used as shorter direction (up/down) when kate is moving
 for row in range(maze_rows):
     current_row = [x for x in input()]  # converting the row data from string to list of elements
     maze.append(current_row)  # adding the current row to the list
