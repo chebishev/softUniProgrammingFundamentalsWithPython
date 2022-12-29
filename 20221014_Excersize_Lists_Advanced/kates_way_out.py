@@ -29,11 +29,12 @@ for row in range(maze_rows):
     current_row = [x for x in input()]  # converting the row data from string to list of elements
     maze.append(current_row)  # adding the current row to the list
 
+    # finding "k" while reading the current input row:
     if "k" in current_row:
-        start_row = row
+        start_row = row  # saving the row, as initial row
         x = row
-        k_index = maze[row].index("k")
-        start_index = k_index
+        k_index = maze[row].index("k")  # getting the index of "k" on the current row
+        start_index = k_index  # saving the column as initial column
         y = k_index
 
 exit_found = False  # with this we will break the while loop if the first exit is found
