@@ -14,13 +14,10 @@ while True:
     if name in dwarf_dictionary[color].keys():
         if physics > dwarf_dictionary[color][name]:
             dwarf_dictionary[color][name] = physics
+# You must order the dwarfs by physics in descending order and then by total count of dwarfs with the same hat color
+# in descending order.
 
-for color in sorted(dwarf_dictionary, key=lambda color: len(dwarf_dictionary[color]), reverse=True):
-    for dwarf, physics in sorted(dwarf_dictionary[color].items(), key= lambda x: -(x[1]), reverse=True):
-        print(dwarf, physics)
-
-
-# 10/100
+print(dwarf_dictionary)
 
 # test inputs:
 
