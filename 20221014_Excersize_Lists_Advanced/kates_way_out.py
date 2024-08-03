@@ -1,5 +1,5 @@
 labyrinth_size = int(input())
-labyrinth = []  # matrix
+labyrinth = []  # matrix with "#" as walls, "k" as Kate position and " " as possible cells for the player to move
 path_list = []  # it contains the path of the player in format [U, R, D, L]
 exit_found = False  # flag for the output print
 max_path_length = 0  # stores the max length of the path if the player reaches the exit
