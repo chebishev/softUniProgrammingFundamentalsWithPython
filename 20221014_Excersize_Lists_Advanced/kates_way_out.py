@@ -1,86 +1,45 @@
-# This function checks if the row and the column are in the borders of the maze
-def valid_position(matrix, row, col):
-    if 0 <= row < len(matrix) and 0 <= col < len(matrix[row]):
-        return True
+labyrinth_size = int(input())
+labyrinth = []  # matrix
+path_list = []  # it contains the path of the player in format [U, R, D, L]
+exit_found = False  # flag for the output print
+max_path_length = 0  # stores the max length of the path if the player reaches the exit
+kate_position = ()  # stores the initial position of the player
+
+for index in range(labyrinth_size):
+    row = list(input())
+    if "k" in row:
+        kate_position = (index, row.index("k"))
+    labyrinth.append(row)
 
 
-# This will check if the given coordinates are valid move (not "#" or "k")
-def not_wall(matrix, row, col):
-    if matrix[row][col] == " ":
-        return True
+def find_paths(row, col, direction, labyrinth, path_list):
+    if row < 0 or col < 0 or row >= len(labyrinth) or col >= len(labyrinth[0]):
+        global exit_found
+        exit_found = True
+        global max_path_length
+        if max_path_length < len(path_list):
+            max_path_length = len(path_list)
+        return
+    if labyrinth[row][col] == "v":
+        return
+    if labyrinth[row][col] == "#":
+        return
+
+    path_list.append(direction)
+
+    labyrinth[row][col] = "v"  # mark the cell as visited
+    # recursive calls for the 4 directions
+    find_paths(row - 1, col, "U", labyrinth, path_list)
+    find_paths(row, col + 1, "R", labyrinth, path_list)
+    find_paths(row + 1, col, "D", labyrinth, path_list)
+    find_paths(row, col - 1, "L", labyrinth, path_list)
+    labyrinth[row][col] = " "  # mark the cell as unvisited
 
 
-# This function checks if the current move is on one of the borders of the maze, which means that the exit is found
-def exit(matrix, row, col):
-    if row == 0 and 0 <= col < len(matrix[row]) \
-            or row == len(matrix) - 1 and 0 <= col < len(matrix[row]) \
-            or col == 0 and 0 <= row < len(matrix[row][col]) \
-            or col == len(matrix[row]) - 1 and 0 <= row < len(matrix[row][col]):
-        return True
-
-
-maze_rows = int(input())  # integer that gives us the number of the rows. We will use it as a range in the for loop
-maze = []  # empty list, which will take all the rows with the given data from the following for loop
-start_row = 0  # this will keep the start position of Kate as a Row number
-start_index = 0  # this will keep the start position of Kate as a Column number
-y = 0  # current row - it will be used as shorter direction (left/right) when kate is moving
-x = 0  # current column - - it will be used as shorter direction (up/down) when kate is moving
-for row in range(maze_rows):
-    current_row = [x for x in input()]  # converting the row data from string to list of elements
-    maze.append(current_row)  # adding the current row to the list
-
-    # finding "k" while reading the current input row:
-    if "k" in current_row:
-        start_row = row  # saving the row, as initial row
-        x = row
-        k_index = maze[row].index("k")  # getting the index of "k" on the current row
-        start_index = k_index  # saving the column as initial column
-        y = k_index
-
-exit_found = False  # with this we will break the while loop if the first exit is found
-path_list = [(start_row, start_index)]  # we are using it as a counter (by length) at the final
-while True:
-
-    # check for valid left position and " " on the left direction
-    if valid_position(maze, x, y - 1) and not_wall(maze, x, y - 1):
-        if exit(maze, x, y - 1):
-            exit_found = True
-            break
-        maze[x][y - 1] = "k"  # marks the current spot as visited and on future check it will be considered as a wall
-        path_list.append("left")
-        y -= 1  # update current column
-
-    # check for valid right position and " " on the right direction
-    elif valid_position(maze, x, y + 1) and not_wall(maze, x, y + 1):
-        if exit(maze, x, y + 1):
-            exit_found = True
-            break
-        maze[x][y + 1] = "k"
-        path_list.append("right")
-        y += 1  # update current column
-
-    # check for valid up position and " " on the up direction
-    elif valid_position(maze, x - 1, y) and not_wall(maze, x - 1, y):
-        if exit(maze, x - 1, y):
-            exit_found = True
-            break
-        maze[x - 1][y] = "k"
-        path_list.append("up")
-        x -= 1  # update current row
-
-    # check for valid down position and " " on the down direction
-    elif valid_position(maze, x + 1, y) and not_wall(maze, x + 1, y):
-        if exit(maze, x + 1, y):
-            exit_found = True
-            break
-        maze[x + 1][y] = "k"
-        path_list.append("down")
-        x += 1  # update current row
-    else:
-        break
+find_paths(kate_position[0], kate_position[1], "", labyrinth, path_list)
 
 if exit_found:
-    print(f"Kate got out in {len(path_list) + 1} moves")
+    print(f"Kate got out in {max_path_length} moves")
 else:
     print("Kate cannot get out")
 
